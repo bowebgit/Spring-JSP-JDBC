@@ -24,15 +24,19 @@ public class ViewController {
 	@RequestMapping(value="/home")
 	public String home(Model model, HttpServletRequest request){
 		
-		ViewAction viewAction = new ViewAction();
+		// ViewAction viewAction = new ViewAction();
 		ArrayList<Book> books = new ArrayList<Book>();
-		books = viewAction.getAllBooks();
-		
-
+		Book book = new Book();
+		book.setBook_title("Famous Title");
+		book.setBook_price(999);
+		book.setBook_author_first("Joe");
+		book.setBook_author_last("Blow");
+		books.add(book);
 		model.addAttribute("books", books);
 		
 		return "/home";
 	}
 
+	
 }
 

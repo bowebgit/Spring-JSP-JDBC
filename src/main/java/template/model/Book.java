@@ -5,16 +5,23 @@
 
 package template.model;
 
+//import com.fasterxml.jackson.annotation.JsonView;
+
 import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+
+import template.jsonview.Views;
 
 @XmlRootElement(name="book")
 public class Book {
 	
 	private int book_id;
+	//@JsonView(Views.Public.class)
 	private String book_title;
+	//@JsonView(Views.Public.class)
 	private String book_author_first;
+	//@JsonView(Views.Public.class)
 	private String book_author_last;
 	private String book_descript;
 	private String book_publisher;
@@ -23,6 +30,7 @@ public class Book {
 	private String book_length;
 	private String book_dim;
 	private String book_format;
+	//@JsonView(Views.Public.class)
 	private Integer book_price;
 	private int book_buycounter;
 	private int book_viewcounter;

@@ -14,10 +14,14 @@
 		<context:component-scan base-package="template.controller"/> 
 		<context:component-scan base-package="template.data"/> 
  		<context:component-scan base-package="template.model"/> 
+ 		<context:component-scan base-package="template.jsonview"/> 
+ 		
 
     	<mvc:annotation-driven/>	
     	
+    	
     	<mvc:resources mapping="/css/**" location="/css/"/>
+    	<mvc:resources mapping="/js/**" location="/js/" />
     	<mvc:resources mapping="/images/**" location="/images/"/>
     	<mvc:resources mapping="/*.html" location="/"/>
     	<mvc:resources mapping="/rest/*" location="/rest/"/>
@@ -25,6 +29,7 @@
     
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="suffix" value=".jsp"/>
+        <property name="prefix" value="WEB-INF/view"/>
     </bean>
     
    
