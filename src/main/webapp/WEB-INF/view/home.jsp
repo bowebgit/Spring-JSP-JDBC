@@ -8,26 +8,27 @@
 		main{
 			width:80%;
 			margin:auto;
-			padding 20px;
+			margin-top: 50px;
 		}
 	</style>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="${pageContext.request.contextPath}/js/bootstrap.js" rel="stylesheet" type="text/css" />
-	<!--NOT WORKING  <link href="${pageContext.request.contextPath}/js/jquery-3.3.1.js" rel="stylesheet" type="text/css" />--> 
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/js/bootstrap.js" />
+	<!--NOT WORKING  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/js/jquery-3.3.1.js"/>--> 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<title>Template</title>
 	</head>
 <body>
 	
 <main>
+<h2>Ajax Example</h2>
 
-<br/>
-<div id="feedback"></div>
-<br/>
-<br/>
+Submit the form for an Ajax example or go to the <a href="${pageContext.request.contextPath}/">Home page</a>.
+
+
+<br/><br/>
 			<c:forEach items="${books}" var="book">
 				<a class="book" href="#" >
 					<span class="booktitle">${book.book_title }</span><br/>
@@ -59,7 +60,9 @@
 			</div>
 		</form>
 <br/>
-
+<br/>
+<div id="feedback"></div>
+<br/>
 
 </main>
 

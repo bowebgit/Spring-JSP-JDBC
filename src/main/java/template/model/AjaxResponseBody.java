@@ -1,19 +1,15 @@
+// Object sent back to ajax request
+
 package template.model;
 
-//import com.fasterxml.jackson.annotation.JsonView;
 import java.util.List;
-
-import template.jsonview.Views;
 
 public class AjaxResponseBody {
 
-	//@JsonView(Views.Public.class)
 	String msg;
 
-	//@JsonView(Views.Public.class)
 	String code;
 
-	//@JsonView(Views.Public.class)
 	List<Book> result;
 
 	public String getMsg() {
